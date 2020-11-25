@@ -44,7 +44,7 @@ const Home = () => {
             trialSlot : trialSlot.substring(0, 22)
         }
         
-        axios.post("http://localhost:5000/submit", details)
+        axios.post("https://notchupserver.herokuapp.com/submit", details)
             .then(res => {
                 console.log(res.data)
                 res.data === "successfull" ? setSubmitStatus("successfull") : setSubmitStatus("unsuccessfull");
